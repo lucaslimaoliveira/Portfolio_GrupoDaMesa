@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    top: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    background-color: #F0F2F5;
+}
+body > div > div:nth-child(n) {
+    height: 100vh;
+    scroll-snap-align: start; 
+}
+body > div {
+    height: 100vh; 
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+hr {
+    border-radius: 10px;
+    border: red 1px solid;
+}
+
+#sobreMim > img {
+    border-radius: 50px;
+    border: 2px dotted red;
+}
+#sobreMim {
+    display: grid;
+    align-items: center; 
+    margin: 30px 0 0 40px;
+    grid-template-columns: 500px 400px 500px;
+}
+
+.info1 {
+    margin-left: 30px;
+}
+.info1 div:nth-child(n) {
+    display: flex;
+} 
+.info1 div:nth-child(n + 1)  {
+    margin-bottom: 50px;
+}
+.info1 div:nth-child(n + 1) p {
+    margin-left: 10px;
+}
+.info1 > div:nth-child(1) > div:nth-child(2) {
+    position: relative;
+    margin-bottom: 100px;
+    top: 36px;
+    left: 10px;
+    height: 20px;
+}
+.info1 > div:nth-child(1) > div:nth-child(2) img {
+    margin-left: 5px;   
+}
+#sobreMim hr {
+    height: 660px;
+}
+.info2 {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 43px;
+
+}
+.info2 h2 {
+    font-size: 35px;
+    text-align: center;
+    text-decoration: underline red solid;
+}
+.info2 p {
+    font-size: 22px;
+}
+#curiosidadesLugaresConheci {
+    display: grid;
+    grid-template-columns: 755px 3px 755px;
+}
+
+#curiosidadesLugaresConheci div:nth-child(1) {
+    width: 680px;
+    margin: auto;
+    font-size: 25px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+}
+#curiosidadesLugaresConheci div:nth-child(2) {
+    width: 680px;
+    font-size: 25px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#curiosidadesLugaresConheci div:nth-child(n) h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#curiosidadesLugaresConheci div:nth-child(n) li {
+    margin-bottom: 40px;
+}
+
+#spotify {
+    background-color: black;
+    color: white;
+}
+
+#spotify div:nth-child(1)  {
+    font-size: 25px;
+    text-align: center;
+}
+#spotify div:nth-child(2) {
+    display: grid;
+    width: 130vh;
+    margin: 40px auto;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: repeat(2,280px);
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+#spotify div:nth-child(2) img {
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 50%;
+}
+#tecnologicasConheco div:nth-child(2) {
+    display: grid;
+    width: 140vh;
+    margin: auto;
+    grid-template-rows: repeat(3,220px);
+    grid-template-columns: repeat(4,250px);
+}
+#tecnologicasConheco h2 {
+    font-size: 35px;
+    text-align: center;
+}
+#tecnologicasConheco div:nth-child(2) img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+#tecnologiasAprender div:nth-child(2) img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+#tecnologiasAprender div:nth-child(2) {
+    display: grid;
+    width: 100vh;
+    margin: auto;
+    grid-template-rows: repeat(2,220px);
+    grid-template-columns: repeat(3,300px);
+}
+
+#tecnologiasAprender h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+#tecnologiasAprender {
+    background-color:black;
+    color: white;
+}
+body > a {
+    background-color: red;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    border: 2px black dashed;
+    right: 15px;
+    top: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
