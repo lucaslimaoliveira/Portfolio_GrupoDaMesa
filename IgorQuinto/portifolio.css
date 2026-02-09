@@ -1,0 +1,425 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container da música do Spotify */
+#musica-container {
+    position: fixed;
+    bottom: 60px;
+    left: 35px;
+    width: 320px;
+    height: 50px;
+    border-radius: 12px;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+/* Variáveis CSS para tema escuro (padrão) */
+:root {
+    --bg-primary: #111;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #eee;
+    --accent: #b4b4b4;
+    --accent-hover: #fff;
+    --header-text: #b4b4b4;
+    --header-text2: #000000;
+    --header-li: #b4b4b4;
+    --button-bg: #1a1a1a;
+    --toggle-knob-rigth: 9px;
+    --border-color: #b4b4b4;
+    --transition: 0.2s ease-in-out;
+}
+
+/* Variáveis CSS para tema claro */
+.light-theme {
+    --bg-primary: #bebebe;
+    --bg-secondary: #fff;
+    --text-primary: #111;
+    --header-text: #b4b4b4;
+    --header-li: #b4b4b4;
+    --header-text2: #000000;
+    --accent: #000000;
+    --border-color: #666;
+    --toggle-knob-rigth: 7px;
+    --button-bg: #1a1a1a;
+}
+
+/* Estilos do corpo */
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Cores de header e footer */
+header,
+footer {
+    background: var(--bg-secondary);
+}
+
+/* Cores do header */
+header,
+header .logo,
+header nav ul li a {
+    color: var(--header-text);
+}
+
+/* Logo clicável */
+.logo {
+    cursor: pointer;
+}
+
+/* Efeito hover nos itens de navegação */
+nav li:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transition: background var(--transition);
+}
+
+/* Botão de alternar tema */
+#theme-toggle {
+    position: fixed;
+    top: var(--toggle-knob-rigth);
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background: var(--button-bg);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform var(--transition);
+    margin-right: 30px;
+}
+
+/* Efeito hover no botão de tema */
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Container principal */
+.Menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header e footer */
+header,
+footer {
+    background: #1a1a1a;
+}
+
+/* Header fixo */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 100px;
+}
+
+/* Estilo do logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b4b4b4;
+}
+
+/* Lista de navegação */
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Itens da lista de navegação */
+nav li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Efeito hover nos itens de navegação */
+nav li:hover {
+    background: #b4b4b4;
+    color: #111;
+    border-radius: 4px;
+}
+
+/* Cor do link no hover */
+header nav ul li:hover a {
+    color: black;
+}
+
+/* Seção hero (não utilizada no HTML atual) */
+.hero {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Seções de conteúdo */
+.sections {
+    margin: 2rem 0;
+}
+
+/* Títulos das seções */
+.sectionsTitulo {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    display: block;
+    text-align: left;
+    padding-bottom: 7px;
+}
+
+/* Grid para seções com 3 imagens */
+.diva {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Grid para seções finais com vídeos */
+.divafinal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1000px, 1000px));
+    justify-content: center;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Banner de imagens */
+.banner {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s;
+}
+
+/* Efeito hover nos banners */
+.banner:hover {
+    transform: scale(1.03);
+}
+
+/* Imagens dentro dos banners */
+.banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Rodapé */
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Efeitos hover no rodapé e logo */
+#pDoFooter:hover {
+    color: #565151;
+}
+
+.logo:hover {
+    color: #565151;
+}
+
+/* Posicionamento dos parágrafos nas seções de vídeo */
+#p {
+    margin-left: -555px;
+    margin-top: 430px;
+}
+
+#p2 {
+    margin-left: -555px;
+    margin-top: 425px;
+}
+
+/* Redes sociais */
+ul.box-redes-sociais {
+    display: flex;
+    background: transparent;
+    width: 305px;
+    float: none;
+    margin: auto;
+}
+
+ul.box-redes-sociais li {
+    list-style: none;
+    margin: auto;
+}
+
+/* Links das redes sociais */
+ul.box-redes-sociais li a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 22px;
+    margin: 0 5px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #eaeaea;
+    z-index: 1;
+}
+
+/* Ícones das redes sociais */
+ul.box-redes-sociais li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .3s;
+    z-index: 3;
+}
+
+/* Efeito hover nos ícones */
+ul.box-redes-sociais li a:hover .icon {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Efeito de preenchimento nas redes sociais */
+ul.box-redes-sociais li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+/* Efeito hover no preenchimento */
+ul.box-redes-sociais li a:hover:before {
+    top: 0;
+}
+
+/* Cores específicas para cada rede social */
+ul.box-redes-sociais li.facebook a:before {
+    background: #3b5999;
+}
+
+ul.box-redes-sociais li.instagram a:before {
+    background: hsl(0 0% 10%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+ul.box-redes-sociais li.twitter a:before {
+    background: #55acee;
+}
+
+ul.box-redes-sociais li.youtube a:before {
+    background: #ff1d15;
+}
+
+ul.box-redes-sociais li.snapchat a:before {
+    background: rgb(255, 252, 0);
+}
+
+ul.box-redes-sociais li.snapchat a:hover .icon {
+    color: #0B0B09;
+}
+
+ul.box-redes-sociais li.github a:before {
+    background-color: black;
+}
+
+ul.box-redes-sociais li.github a:hover .icon {
+    color: white;
+}
+
+/* Botão de voltar/Netflix */
+#back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 1;
+    transform: none;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover no botão */
+#back:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Links personalizados */
+.link-site {
+    color: rgb(88, 88, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-site:hover {
+    color: rgb(36, 36, 247);
+}
