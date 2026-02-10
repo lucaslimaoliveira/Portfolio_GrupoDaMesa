@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: darksalmon;
+}
+
+div {
+    display: block;
+}
+
+div h1 {
+    color: aliceblue;
+}
+
+ul {
+    width: 500px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+main {
+    font-size: 40px;
+    margin-top: 230px;
+}
+
+main p {
+    animation: color 5s infinite alternate;
+}
+
+@keyframes color {
+    0% {
+        color: aquamarine;
+    }
+    33% {
+        color: blueviolet;
+    }
+    66% {
+        color: forestgreen;
+    }
+    100% {
+        color: darkred;
+    }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: darksalmon;
+    color: aliceblue;
+}
+
+footer p {
+    cursor: pointer;
+}
+
+footer p:hover {
+    color: antiquewhite;
+}
